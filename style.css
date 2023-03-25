@@ -33,3 +33,88 @@ Nastav je receptům jako obrázky na pozadí (tj. nepřidávej je jako <img> do 
 Na rozložení prvků NEPOUŽÍVEJ absolutní pozicování, ale pouze flexboxy.
 Flexboxy mohou být vnořené do sebe, klidně několikrát.
 */
+
+/* TODO - udělat 1px bílý border pomocí calc a odečtení jednoho px z flex-basis */
+/* TODO - dokončit Media Query pro jednotlivé velikosti */
+
+body {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+/* ! HLAVNÍ RECEPT */
+.hlavni-recept {
+	background-image: url(images/salat.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 200px;
+	padding: 10px;
+	/* ! zarovnání textu pod sebe a rozhození nahoru a dolů */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.hlavni-recept h2 {
+	font-family: 'Raleway', sans-serif;
+	font-size: 28px;
+}
+
+.hlavni-recept p {
+	margin: 0;
+}
+
+.hlavni-recept img {
+	width: 100%;
+}
+
+
+
+
+/* ! OSTATNÍ RECEPTY - společné vlastnosti */
+.recept {
+	background-size: cover;
+	background-repeat: no-repeat;
+	min-height: 90px;
+	padding: 10px;
+	/* ! zarovnání textu pod sebe a rozhození nahoru a dolů */
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.recept img {
+	width: 100%;
+}
+
+.recept h2 {
+	margin-bottom: 0;
+	font-size: 18px;
+}
+
+.recept p {
+	margin: 0;
+}
+
+.popisek {
+	display: flex;
+	justify-content: space-between;
+}
+
+
+/* ! JEDNOTLIVÉ RECEPTY */
+.recept1 {
+	background-image: url(images/chlebicek.jpg);
+}
+
+.recept2 {
+	background-image: url(images/tacos.jpg);
+}
+
+.recept3 {
+	background-image: url(images/cizrna.jpg);
+}
+
+.recept4 {
+	background-image: url(images/burger.jpg);
+}
